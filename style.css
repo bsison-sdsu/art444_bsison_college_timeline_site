@@ -1,0 +1,25 @@
+/*CSS comment*/
+
+@font-face {
+    font-family: unnamed;
+    src: url(heming_variable.ttf);
+}
+
+@font-face {
+    font-family: switzer;
+    src: url(Switzer-Medium.woff);
+}
+
+html{
+    font-family: switzer, Arial, Helvetica, sans-serif;
+}
+
+.hook, 
+.subhook,
+.semester_h1,
+.semester_h2,
+.semester_h3,
+footer div.container {
+    font-family: unnamed, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
