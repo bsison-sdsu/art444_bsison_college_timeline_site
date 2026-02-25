@@ -2,17 +2,18 @@
 
 @font-face {
     font-family: unnamed;
-    src: url(heming_variable.ttf);
+    src: url(fonts/heming_variable.ttf);
 }
 
 @font-face {
     font-family: switzer;
-    src: url(Switzer-Medium.woff);
+    src: url(font/Switzer-Medium.woff);
 }
 
 html{
     font-family: switzer, Arial, Helvetica, sans-serif;
     font-size: 20px;
+    color: #0E0A00;
 }
 
 .hook, 
@@ -24,9 +25,24 @@ footer a,
 footer p {
     font-family: unnamed, Arial, Helvetica, sans-serif;
     font-weight: 600;
+    margin: 0;
 }
 
-nav div.container {
+.semester_h1 {
+    font-size: 128px;
+}
+
+.semester_h2 {
+    font-size: 56px;
+}
+
+.semester_h3 {
+    font-size: 36px;
+}
+
+/* NAV CSS */
+
+nav .container {
     display: flex;
     justify-content: space-between;
 }
@@ -35,27 +51,65 @@ nav {
     margin: 0 80px 0 80px;
 }
 
+/* BODY CSS */
+
 body {
     margin: 0;
     padding-top: 20px;
+    background-color: #F8F5EF;
 }
 
 .hook {
-    font-size: 200px;
-    line-height: 190px;
+    font-size: 150px;
+    line-height: 145px;
     margin: 100px 0 0 0;
 }
 
-section#hero,
-section#about {
+/* SECTION CSS */
+
+.image_container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#section-1 .image_container img {
+    width: 300px;
+}
+
+.container.even {
+    text-align: right;
+}
+
+#section-1 .container,
+#section-2 .container,
+#section-3 .container,
+#section-4 .container,
+#section-5 .container,
+#section-6 .container {
+    margin: 0 130px 0 130px;
+}
+
+#hero,
+#about {
     margin-top: 100px;
+}
+
+#about .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px 0 150px;
+    align-items: flex-start;
+    gap: 40px;
 }
 
 section {
     margin: 350px 80px 350px 80px;
 }
 
-footer div.container {
+/* FOOTER CSS */
+
+footer .container {
     background-color: #121212;
     color: #F8F5EF;
     font-weight: 200;
