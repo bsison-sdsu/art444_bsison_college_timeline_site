@@ -40,11 +40,26 @@ footer p {
     font-size: 36px;
 }
 
+#hero,
+#about {
+    margin-top: 100px;
+}
+
+section {
+    margin: 350px 80px 350px 80px;
+}
+
 /* NAV CSS */
 
 nav .container {
     display: flex;
     justify-content: space-between;
+}
+
+#nav_links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 nav {
@@ -68,13 +83,19 @@ body {
 /* SECTION CSS */
 
 .image_container {
+    width: auto;
+    height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
 }
 
-#section-1 .image_container img {
-    width: 300px;
+.image_container img {
+    max-width: 330px;
+    height: 250px;
+    object-fit: cover;
+    border: #0E0A00 solid 3px;
+    border-radius: 15px;
 }
 
 .container.even {
@@ -90,11 +111,6 @@ body {
     margin: 0 130px 0 130px;
 }
 
-#hero,
-#about {
-    margin-top: 100px;
-}
-
 #about .container {
     display: flex;
     justify-content: space-between;
@@ -103,8 +119,12 @@ body {
     gap: 40px;
 }
 
-section {
-    margin: 350px 80px 350px 80px;
+#faq .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 150px 0 150px;
 }
 
 /* FOOTER CSS */
