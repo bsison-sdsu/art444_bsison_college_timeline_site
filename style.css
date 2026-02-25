@@ -12,7 +12,7 @@
 
 html{
     font-family: switzer, Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #0E0A00;
 }
 
@@ -20,16 +20,14 @@ html{
 .subhook,
 .semester_h1,
 .semester_h2,
-.semester_h3,
-footer a, 
-footer p {
+.semester_h3 {
     font-family: unnamed, Arial, Helvetica, sans-serif;
     font-weight: 600;
     margin: 0;
 }
 
 .semester_h1 {
-    font-size: 128px;
+    font-size: 116px;
 }
 
 .semester_h2 {
@@ -40,6 +38,10 @@ footer p {
     font-size: 36px;
 }
 
+p{
+    margin: 0;
+}
+
 #hero,
 #about {
     margin-top: 100px;
@@ -47,6 +49,19 @@ footer p {
 
 section {
     margin: 350px 80px 350px 80px;
+}
+
+
+.breadcrumbs {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+
+.breadcrumb {
+    width: 8px;
+    height: 8px;
+    background-color: #0E0A00;
 }
 
 /* NAV CSS */
@@ -62,8 +77,24 @@ nav .container {
     gap: 30px;
 }
 
+#nav_links a {
+    color: #0E0A00;
+    text-decoration: none;
+    font-weight: 400;
+}
+
 nav {
     margin: 0 80px 0 80px;
+}
+
+.semester_links {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.semester_links img {
+    transform: rotate(90deg);
 }
 
 /* BODY CSS */
@@ -75,9 +106,25 @@ body {
 }
 
 .hook {
-    font-size: 150px;
+    font-size: 158px;
     line-height: 145px;
+}
+.subhook {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.sub_arrow {
+    transform: rotate(90deg);
+}
+
+#hero .container {
     margin: 100px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
 }
 
 /* SECTION CSS */
@@ -87,11 +134,11 @@ body {
     height: auto;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 0;
 }
 
 .image_container img {
-    max-width: 330px;
+    width: 30%;
     height: 250px;
     object-fit: cover;
     border: #0E0A00 solid 3px;
@@ -99,6 +146,7 @@ body {
 }
 
 .container.even {
+    align-items: flex-end;
     text-align: right;
 }
 
@@ -108,16 +156,35 @@ body {
 #section-4 .container,
 #section-5 .container,
 #section-6 .container {
-    margin: 0 130px 0 130px;
+    margin: 0 170px 0 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+.semester_p {
+    width: 90%;
+}
+
+/* ABOUT CSS */
 
 #about .container {
     display: flex;
     justify-content: space-between;
-    padding: 0 150px 0 150px;
     align-items: flex-start;
+    padding: 0 140px 0 140px;
     gap: 40px;
 }
+
+#about .container img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    border: #0E0A00 solid 3px;
+    border-radius: 15px;
+}
+
+/* FAQ CSS */
 
 #faq .container{
     display: flex;
@@ -129,13 +196,31 @@ body {
 
 /* FOOTER CSS */
 
+footer {
+    font-family: unnamed, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+footer a{
+    color:#F8F5EF;
+    text-decoration: underline;
+}
+
 footer .container {
     background-color: #121212;
     color: #F8F5EF;
-    font-weight: 200;
     font-size: 15px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding: 80px;
+}
+
+#contact_info,
+#socials,
+#copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
