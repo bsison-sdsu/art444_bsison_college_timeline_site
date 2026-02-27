@@ -184,6 +184,10 @@ body {
     border-radius: 15px;
 }
 
+.about_copy p {
+    text-wrap: pretty;
+}
+
 /* FAQ CSS */
 
 #faq .container{
