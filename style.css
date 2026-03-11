@@ -1,5 +1,24 @@
 /*CSS comment*/
 
+:root {
+    --primary-bg-color: #F8F5EF;
+    --primary-text-color: #0E0A00;
+    --primary-font: 'Switzer', Arial, Helvetica, sans-serif;
+    --secondary-font: 'Unnamed', Arial, Helvetica, sans-serif;
+    --h1-desktop: 7.25em;
+    --h2-desktop: 3.5em;
+    --h3-desktop: 2.25em;
+    --p-desktop: 1.125em;
+    --h1-tablet: 5.375em;
+    --h2-tablet: 2em;
+    --h3-tablet: 1.5em;
+    --p-tablet: 1em;
+    --h1-mobile: 2.125em;
+    --h2-mobile: 2em;
+    --h3-mobile: 1em;
+    --p-mobile: 0.875em;
+}
+
 @font-face {
     font-family: unnamed;
     src: url(fonts/heming_variable.ttf);
@@ -10,13 +29,13 @@
     src: url(font/Switzer-Medium.woff);
 }
 
-html{
+html {
     font-family: switzer, Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: var(--p-desktop);
     color: #0E0A00;
 }
 
-.hook, 
+.hook,
 .subhook,
 .semester_h1,
 .semester_h2,
@@ -27,18 +46,18 @@ html{
 }
 
 .semester_h1 {
-    font-size: 116px;
+    font-size: var(--h1-desktop);
 }
 
 .semester_h2 {
-    font-size: 56px;
+    font-size: var(--h2-desktop);
 }
 
 .semester_h3 {
-    font-size: 36px;
+    font-size: var(--h3-desktop);
 }
 
-p{
+p {
     margin: 0;
 }
 
@@ -53,9 +72,9 @@ section {
 
 
 .breadcrumbs {
-   display: flex;
-   flex-direction: column;
-   gap: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .breadcrumb {
@@ -84,7 +103,7 @@ nav .container {
 }
 
 nav {
-    margin: 0 80px 0 80px;
+    margin: 0 80px;
 }
 
 .semester_links {
@@ -106,9 +125,10 @@ body {
 }
 
 .hook {
-    font-size: 158px;
+    font-size: 9.75em;
     line-height: 145px;
 }
+
 .subhook {
     display: flex;
     align-items: baseline;
@@ -138,16 +158,11 @@ body {
 }
 
 .image_container img {
-    width: 30%;
+    width: 32%;
     height: 250px;
     object-fit: cover;
     border: #0E0A00 solid 3px;
     border-radius: 15px;
-}
-
-.container.even {
-    align-items: flex-end;
-    text-align: right;
 }
 
 #section-1 .container,
@@ -156,7 +171,7 @@ body {
 #section-4 .container,
 #section-5 .container,
 #section-6 .container {
-    margin: 0 170px 0 170px;
+    margin: 0 170px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -172,7 +187,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 140px 0 140px;
+    padding: 0 140px;
     gap: 40px;
 }
 
@@ -190,12 +205,33 @@ body {
 
 /* FAQ CSS */
 
-#faq .container{
+#faq .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    padding: 0 150px 0 150px;
+    padding: 0 150px;
+}
+
+#faq .container .semester_h1 {
+    align-self: center;
+}
+
+.question_container {
+    border: #0E0A00 solid 3px;
+    padding: 10px 20px;
+    border-radius: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.q_inner_container details .semester_h3 {
+    padding: 10px 0;
+}
+
+.semester_h3 {
+    text-wrap: pretty;
 }
 
 /* FOOTER CSS */
@@ -206,8 +242,8 @@ footer {
     margin: 0;
 }
 
-footer a{
-    color:#F8F5EF;
+footer a {
+    color: #F8F5EF;
     text-decoration: underline;
 }
 
@@ -227,4 +263,157 @@ footer .container {
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+/*Tablet CSS*/
+
+@media only screen and (max-width: 992px) {
+
+    html {
+    font-size: var(--p-tablet);
+}
+    
+    .semester_h1 {
+        font-size: var(--h1-tablet);
+    }
+
+    .semester_h2 {
+        font-size: var(--h2-tablet);
+    }
+
+    .semester_h3 {
+        font-size: var(--h3-tablet);
+    }
+
+    nav {
+        margin: 0 30px;
+    }
+
+    .hook {
+        font-size: 8em;
+        line-height: 140px;
+    }
+
+    section {
+        margin: 180px 30px;
+    }
+
+    #hero .container {
+        margin: 100px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #section-1 .container,
+    #section-2 .container,
+    #section-3 .container,
+    #section-4 .container,
+    #section-5 .container,
+    #section-6 .container {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #about .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0;
+        gap: 40px;
+    }
+
+    #faq .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 30px;
+    }
+
+}
+
+
+/*Mobile CSS*/
+
+@media only screen and (max-width: 478px) {
+
+    html {
+    font-size: var(--p-mobile);
+}
+    
+    .semester_h1 {
+        font-size: var(--h1-mobile);
+    }
+
+    .semester_h2 {
+        font-size: var(--h2-mobile);
+    }
+
+    .semester_h3 {
+        font-size: var(--h3-mobile);
+    }
+
+    nav {
+        margin: 0 30px;
+    }
+
+    #nav_links {
+        display: none;
+    }
+
+    .hook {
+        font-size: 8em;
+        line-height: 140px;
+    }
+
+    section {
+        margin: 180px 30px;
+    }
+
+    #hero .container {
+        margin: 100px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #section-1 .container,
+    #section-2 .container,
+    #section-3 .container,
+    #section-4 .container,
+    #section-5 .container,
+    #section-6 .container {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #about .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0;
+        gap: 40px;
+    }
+
+    #faq .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 30px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+    }
 }
