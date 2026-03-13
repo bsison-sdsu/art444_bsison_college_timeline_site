@@ -1,0 +1,214 @@
+/*Tablet CSS*/
+
+:root {
+    --primary-bg-color: #F8F5EF;
+    --primary-text-color: #0E0A00;
+    --primary-font: 'Switzer', Arial, Helvetica, sans-serif;
+    --secondary-font: 'Unnamed', Arial, Helvetica, sans-serif;
+    --h1-desktop: 6em;
+    --h2-desktop: 3.5em;
+    --h3-desktop: 2.25em;
+    --p-desktop: 1.125em;
+    --h1-tablet: 5.375em;
+    --h2-tablet: 2em;
+    --h3-tablet: 1.5em;
+    --p-tablet: 1em;
+    --h1-mobile: 2.5em;
+    --h2-mobile: 1.75em;
+    --h3-mobile: 1em;
+    --p-mobile: 0.875em;
+}
+
+@font-face {
+    font-family: unnamed;
+    src: url(fonts/heming_variable.ttf);
+}
+
+@font-face {
+    font-family: switzer;
+    src: url(font/Switzer-Medium.woff);
+}
+
+@media only screen and (max-width: 992px) {
+
+    html {
+        font-size: var(--p-tablet);
+    }
+
+    .semester_h1 {
+        font-size: var(--h1-tablet);
+    }
+
+    .semester_h2 {
+        font-size: var(--h2-tablet);
+    }
+
+    .semester_h3 {
+        font-size: var(--h3-tablet);
+    }
+
+    nav {
+        margin: 0 30px;
+    }
+
+    .hook {
+        font-size: 15vw;
+        line-height: 13vw;
+    }
+
+    section {
+        margin: 180px 30px;
+    }
+
+    #hero .hero_container {
+        margin: 100px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section .container.semesters {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container .about_copy .semester_h1 {
+        font-size: clamp(2em, 9vw, var(--h1-tablet));
+    }
+
+    #faq .container {
+        gap: 40px;
+        padding: 30px;
+    }
+
+}
+
+
+/*Mobile CSS*/
+
+@media only screen and (max-width: 478px) {
+
+    html {
+        font-size: var(--p-mobile);
+    }
+
+    .semester_h1 {
+        font-size: var(--h1-mobile);
+    }
+
+    .semester_h2 {
+        font-size: var(--h2-mobile);
+    }
+
+    .semester_h3 {
+        font-size: var(--h3-mobile);
+    }
+
+    p {
+        text-wrap: pretty;
+    }
+
+    nav {
+        margin: 0 20px;
+    }
+
+    #nav_links {
+        gap: 10px;
+    }
+
+    .desktop_links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+    }
+
+    section {
+        margin: 180px 20px;
+    }
+
+    .semester_p {
+        width: 100%;
+    }
+
+    #hero .hero_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hook {
+        font-size: 13vw;
+        line-height: 13vw;
+    }
+
+    .image_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .image_container img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border: #0E0A00 solid 3px;
+        border-radius: 15px;
+    }
+
+    #about .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .semester_h1.mobile {
+        display: block;
+    }
+
+    .about_copy .semester_h1 {
+        display: none;
+    }
+
+    #about .container img {
+        width: 80%;
+        aspect-ratio: 3.5 / 4;
+        object-fit: cover;
+        border: #0E0A00 solid 3px;
+        border-radius: 15px;
+    }
+
+    #faq .container {
+        gap: 10px;
+        padding: 20px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 40px;
+        text-align: center;
+    }
+
+    #contact_info,
+    #socials,
+    #copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+}
