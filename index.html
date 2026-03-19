@@ -14,6 +14,19 @@
 
     <!-- Nav And Hero-->
     <nav>
+        <div id="mobile-menu">
+            <div class="mobile-links">
+                 <div class="exit-icon">
+                        <img src="icons/exit-icon.svg" alt="exit" onclick="showMobileLinks()"/>
+                    </div>
+                <a href="index.html">Home</a>
+                <div class="semester_links">
+                    <a>Semesters</a>
+                    <img src="icons/arrow.svg" />
+                </div>
+                <a href="about.html">About</a>
+            </div>
+        </div>
         <div id="top" class="container">
             <div id="logo">
                 BEN<br />SISON
@@ -28,7 +41,7 @@
                     <a href="about.html">About</a>
                 </div>
                 <div class="hamburger">
-                    <img src="icons/hamburger.svg" />
+                    <img src="icons/hamburger.svg" onclick="showMobileLinks()"/>
                 </div>
                 <img src="icons/dark_mode_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
             </div>
@@ -255,9 +268,6 @@
         </div>
     </section>
 
-</body>
-
-
 <footer>
 
     <div class="container">
@@ -277,5 +287,9 @@
     </div>
 
 </footer>
+
+<script src="script.js"></script>
+
+</body>
 
 </html>

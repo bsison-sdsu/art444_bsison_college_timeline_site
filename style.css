@@ -3,7 +3,7 @@
 :root {
     --primary-bg-color: #F8F5EF;
     --primary-text-color: #0E0A00;
-    --primary-font: 'Switzer', Arial, Helvetica, sans-serif;
+    --primary-font: 'Switzer', Helvetica, Arial, sans-serif;
     --secondary-font: 'Unnamed', Arial, Helvetica, sans-serif;
     --h1-desktop: 6em;
     --h2-desktop: 3.5em;
@@ -100,6 +100,10 @@ nav .container {
     display: flex;
     align-items: center;
     gap: 30px;
+}
+
+#mobile-menu {
+    display: none;
 }
 
 #nav_links a {
