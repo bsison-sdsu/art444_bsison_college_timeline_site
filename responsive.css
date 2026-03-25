@@ -130,29 +130,24 @@
     #mobile-menu.open {
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
         position: fixed;
         top: 0;
         right: 0;
         width: 100%;
         height: 100vh;
         padding: 20px;
+        font-size: var(--p-desktop);
         background-color: var(--primary-bg-color);
     }
 
-    .mobile-links {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 20px;
-        font-size: var(--p-desktop);
-    }
-
-    .mobile-links a {
+    #mobile-menu a {
         color: #0E0A00;
         text-decoration: none;
     }
 
-    .mobile-links .semester_links {
+    .mobile-links .semesterlinks {
         display: flex;
         align-items: center;
     }

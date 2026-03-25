@@ -17,6 +17,7 @@
     --h2-mobile: 1.75em;
     --h3-mobile: 1em;
     --p-mobile: 0.875em;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -98,7 +99,7 @@ nav .container {
 
 .desktop_links {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 30px;
 }
 
@@ -118,12 +119,36 @@ nav {
 
 .semester_links {
     display: flex;
-    align-items: flex-end;
-    gap: 2px;
+    flex-direction: column;
+    position: relative;
 }
 
-.semester_links img {
+.semester-hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.semester-hover img {
     transform: rotate(90deg);
+}
+
+.semester-main {
+    display: flex;
+    align-items: center;
+}
+
+.semester-dropdown {
+    display: none;
+}
+
+.semester-dropdown.open {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 100%;
 }
 
 .hamburger {
