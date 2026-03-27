@@ -149,6 +149,7 @@ nav {
     gap: 10px;
     position: absolute;
     top: 100%;
+    background-color: var(--primary-bg-color);
 }
 
 .hamburger {

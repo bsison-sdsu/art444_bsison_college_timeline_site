@@ -140,6 +140,7 @@
         padding: 20px;
         font-size: var(--p-desktop);
         background-color: var(--primary-bg-color);
+        z-index: 999;
     }
 
     #mobile-menu a {
@@ -157,6 +158,13 @@
         align-items: center;
     }
 
+    .semester-dropdown.open {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        gap: 10px;
+        top: 100%;
+    }
     section {
         margin: 180px 20px;
     }

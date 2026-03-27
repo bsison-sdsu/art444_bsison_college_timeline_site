@@ -13,3 +13,17 @@ function showSemesterLinks() {
 
 semesterMenu.addEventListener('mouseenter', showSemesterLinks);
 semesterMenu.addEventListener('mouseleave', showSemesterLinks);
+
+const mobileSemesterMenu = document.querySelector('#mobile-menu .semester-hover');
+const mobileSemesterList = document.querySelector('#mobile-menu .semester-hover .semester-dropdown');
+const mobileSemesterOption = document.querySelector('#mobile-menu .semester-hover .semester-dropdown .semester-option');
+
+function showMobileSemesterLinks() {
+    mobileSemesterList.classList.toggle('open');
+}
+
+for (let i = 0; i < mobileSemesterOption.length; i++) {
+    mobileSemesterOption[i].addEventListener('click', showMobileLinks);
+}
+
+mobileSemesterMenu.addEventListener('click', showMobileSemesterLinks);
