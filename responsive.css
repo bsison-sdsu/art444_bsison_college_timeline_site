@@ -1,8 +1,6 @@
 /*Tablet CSS*/
 
 :root {
-    --primary-bg-color: #F8F5EF;
-    --primary-text-color: #0E0A00;
     --primary-font: 'Switzer', Arial, Helvetica, sans-serif;
     --secondary-font: 'Unnamed', Arial, Helvetica, sans-serif;
     --h1-desktop: 6em;
@@ -144,7 +142,7 @@
     }
 
     #mobile-menu a {
-        color: #0E0A00;
+        color: var(--primary-text-color);
         text-decoration: none;
     }
 
@@ -196,7 +194,7 @@
         width: 100%;
         aspect-ratio: 4 / 3;
         object-fit: cover;
-        border: #0E0A00 solid 3px;
+        border: var(--primary-text-color) solid 3px;
         border-radius: 15px;
     }
 
@@ -222,7 +220,7 @@
         width: 80%;
         aspect-ratio: 3.5 / 4;
         object-fit: cover;
-        border: #0E0A00 solid 3px;
+        border: var(--primary-text-color) solid 3px;
         border-radius: 15px;
     }
 

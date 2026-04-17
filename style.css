@@ -33,7 +33,7 @@
 html {
     font-family: switzer, Arial, Helvetica, sans-serif;
     font-size: var(--p-desktop);
-    color: #0E0A00;
+    color: var(--primary-text-color);
 }
 
 .hook,
@@ -81,7 +81,7 @@ section {
 .breadcrumb {
     width: 8px;
     height: 8px;
-    background-color: #0E0A00;
+    background-color: var(--primary-text-color);
 }
 
 /* NAV CSS */
@@ -108,7 +108,7 @@ nav .container {
 }
 
 #nav_links a {
-    color: #0E0A00;
+    color: var(--primary-text-color);
     text-decoration: none;
     font-weight: 400;
 }
@@ -161,7 +161,7 @@ nav {
 body {
     margin: 0;
     padding-top: 20px;
-    background-color: #F8F5EF;
+    background-color: var(--primary-bg-color);
 }
 
 .hook {
@@ -212,7 +212,7 @@ section .container.semesters {
     width: 32%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
-    border: #0E0A00 solid 3px;
+    border: var(--primary-text-color) solid 3px;
     border-radius: 15px;
 }
 
@@ -230,7 +230,7 @@ section .container.semesters {
 #about .container img {
     width: 40%;
     object-fit: cover;
-    border: #0E0A00 solid 3px;
+    border: var(--primary-text-color) solid 3px;
     border-radius: 15px;
 }
 
@@ -257,7 +257,7 @@ section .container.semesters {
 }
 
 .question_container {
-    border: #0E0A00 solid 3px;
+    border: var(--primary-text-color) solid 3px;
     padding: 10px 20px;
     border-radius: 150px;
     width: 100%;
@@ -302,4 +302,23 @@ footer .container {
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+/* DARK MODE */
+ [data-theme="dark"] {
+    --primary-bg-color: #0E0A00;
+    --primary-text-color: #F8F5EF;
+ }
+
+ [data-theme="dark"] body {
+    background-color: #0E0A00;
+    color: #F8F5EF;
+}
+
+[data-theme="dark"] nav img {
+    filter: invert(1);
+}
+
+[data-theme="dark"] .subhook a {
+    color: #AEABA7;
 }
