@@ -14,6 +14,8 @@ function showSemesterLinks() {
 semesterMenu.addEventListener('mouseenter', showSemesterLinks);
 semesterMenu.addEventListener('mouseleave', showSemesterLinks);
 
+//Mobile Menu
+
 const mobileSemesterMenu = document.querySelector('#mobile-menu .semester-hover');
 const mobileSemesterList = document.querySelector('#mobile-menu .semester-hover .semester-dropdown');
 const mobileSemesterOption = document.querySelector('#mobile-menu .semester-hover .semester-dropdown .semester-option');
@@ -58,13 +60,34 @@ if (savedTheme) {
     setTheme(shouldBeDark());
 }
 
-setInterval(function(){
+setInterval(function () {
     if (!localStorage.getItem('theme')) {
         setTheme(shouldBeDark());
     }
 }, 60000);
 
-darkModeToggle.addEventListener('click', function() {
+darkModeToggle.addEventListener('click', function () {
     const isDarkNow = htmlEl.getAttribute('data-theme') === 'dark';
     setTheme(!isDarkNow);
 });
+
+//FAQ
+
+const faqHeadlines = document.querySelectorAll('.faq-headline');
+const allAnswers = document.querySelectorAll('.q_copy_cont');
+
+for (let i = 0; i < faqHeadlines.length; i++) {
+    faqHeadlines[i].addEventListener('click', function () {
+        let faqAnswer = this.parentElement.querySelector('.q_copy_cont');
+
+        let isOpen = faqAnswer.style.maxHeight === '200px';
+
+        for (let i = 0; i < allAnswers.length; i++) {
+            allAnswers[i].style.maxHeight = '0';
+        }
+
+        if (!isOpen) {
+            faqAnswer.style.maxHeight = '200px';
+        }
+    });
+};

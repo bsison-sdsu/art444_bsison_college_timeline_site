@@ -6,6 +6,13 @@
     <title>About Me</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
+
+    <script>
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
 </head>
 
 <body>
@@ -16,14 +23,15 @@
                 <img src="icons/exit-icon.svg" alt="exit" onclick="showMobileLinks()" />
             </div>
             <a href="index.html">Home</a>
-             <div class="semester_links">
+            <div class="semester_links">
                 <div class="semester-hover">
                     <div class="semester-main">
                         <a>Semesters</a>
                         <img src="icons/arrow.svg" />
                     </div>
                     <div class="semester-dropdown">
-                        <a href="index.html#section-1" class="semester-option" onclick="showMobileLinks()">Semester 1</a>
+                        <a href="index.html#section-1" class="semester-option" onclick="showMobileLinks()">Semester
+                            1</a>
                         <a href="#section-3" class="semester-option" onclick="showMobileLinks()">Semester 3</a>
                         <a href="#section-4" class="semester-option" onclick="showMobileLinks()">Semester 4</a>
                         <a href="#section-2" class="semester-option" onclick="showMobileLinks()">Semester 2</a>
@@ -48,12 +56,24 @@
                                 <img src="icons/arrow.svg" />
                             </div>
                             <div class="semester-dropdown">
-                                <a href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-1">Semester 1</a>
-                                <a href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-2">Semester 2</a>
-                                <a href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-3">Semester 3</a>
-                                <a href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-4">Semester 4</a>
-                                <a href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-5">Semester 5</a>
-                                <a href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-6">Semester 6</a>
+                                <a
+                                    href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-1">Semester
+                                    1</a>
+                                <a
+                                    href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-2">Semester
+                                    2</a>
+                                <a
+                                    href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-3">Semester
+                                    3</a>
+                                <a
+                                    href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-4">Semester
+                                    4</a>
+                                <a
+                                    href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-5">Semester
+                                    5</a>
+                                <a
+                                    href="https://bsison-sdsu.github.io/art444_bsison_college_timeline_site/index.html#section-6">Semester
+                                    6</a>
                             </div>
                         </div>
                     </div>
@@ -102,26 +122,16 @@
             <h2 class="semester_h1">FAQ</h2>
             <div class="question_container">
                 <div class="q_inner_container">
-                    <details>
-                        <summary class="semester_h3">Question 1
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                    width="24px" fill="#000000">
-                                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                                </svg>
-                            </span>
-                        </summary>
-                        <div class="q_copy_cont">
-                            <h3 class="semester_h3">What was your favorite project you produced at SDSU?</h3>
-                            <p>My favorite project I produced at SDSU was my final project for ART 344 which was a
-                                website that shared my passion for culture and design.</p>
-                        </div>
-                    </details>
+                    <h3 class="semester_h3 faq-headline">What was your favorite project you produced at SDSU?</h3>
+                    <div class="q_copy_cont">
+                        <p>My favorite project I produced at SDSU was my final project for ART 344 which was a
+                            website that shared my passion for culture and design.</p>
+                    </div>
                 </div>
             </div>
             <div class="question_container">
                 <div class="q_inner_container">
-                    <h3 class="semester_h3">What do you have planned for after graduation?</h3>
+                    <h3 class="semester_h3 faq-headline">What do you have planned for after graduation?</h3>
                     <div class="q_copy_cont">
                         <p>After graduation I plan to work in UI/UX Design and continue learning more about web
                             development.</p>
@@ -130,7 +140,7 @@
             </div>
             <div class="question_container">
                 <div class="q_inner_container">
-                    <h3 class="semester_h3">What was your favorite class you took at SDSU?</h3>
+                    <h3 class="semester_h3 faq-headline">What was your favorite class you took at SDSU?</h3>
                     <div class="q_copy_cont">
                         <p>My favorite class was ART 342A and ART 344 both of my professors were very helpful and made
                             the class enjoyable.</p>
@@ -139,7 +149,7 @@
             </div>
             <div class="question_container">
                 <div class="q_inner_container">
-                    <h3 class="semester_h3">What work are you most proud producing at SDSU?</h3>
+                    <h3 class="semester_h3 faq-headline">What work are you most proud producing at SDSU?</h3>
                     <div class="q_copy_cont">
                         <p>I am most proud of producing projects in my design classes that share my passion for culture
                             and design</p>

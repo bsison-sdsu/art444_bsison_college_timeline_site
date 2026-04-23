@@ -6,6 +6,13 @@
     <title> College Timeline </title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
+
+    <script>
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
 </head>
 
 

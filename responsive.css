@@ -13,7 +13,7 @@
     --p-tablet: 1em;
     --h1-mobile: 2.5em;
     --h2-mobile: 1.75em;
-    --h3-mobile: 1em;
+    --h3-mobile: 1.25em;
     --p-mobile: 0.875em;
 }
 
@@ -80,6 +80,10 @@
     #faq .container {
         gap: 40px;
         padding: 30px;
+    }
+
+    .q_copy_cont p {
+        font-size: var(--p-tablet);
     }
 
 }
@@ -163,6 +167,7 @@
         gap: 10px;
         top: 100%;
     }
+
     section {
         margin: 180px 20px;
     }
