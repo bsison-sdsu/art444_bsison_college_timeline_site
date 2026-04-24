@@ -289,8 +289,10 @@ section .container.semesters {
 }
 
 .faq-headline {
+    font-family: var(--secondary-font);
     font-size: var(--faq-headline);
     color: var(--primary-text-color);
+    margin: 0;
 }
 
 .semester_h3 {
@@ -300,7 +302,7 @@ section .container.semesters {
 /* FOOTER CSS */
 
 footer {
-    font-family: unnamed, Arial, Helvetica, sans-serif;
+    font-family: var(--secondary-font);
     font-weight: 400;
     margin: 0;
 }
