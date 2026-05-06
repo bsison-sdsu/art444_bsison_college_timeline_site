@@ -181,6 +181,7 @@
     .hook {
         font-size: 13vw;
         line-height: 13vw;
+        min-height: 40vw;
     }
 
     .image_container {

@@ -19,6 +19,10 @@
     --h3-mobile: 1em;
     --p-mobile: 0.875em;
     --faq-headline: 1.5em;
+    --h1-sem-desktop: 3em;
+    --h2-sem-desktop: 2em;
+    --h3-sem-desktop: 1em;
+    --p-sem-desktop: 0.55em;
     scroll-behavior: smooth;
 }
 
@@ -68,6 +72,29 @@ html {
 
 .semester_h3 {
     font-size: var(--h3-desktop);
+}
+
+.sem-h1, .sem-h2,.sem-h3 {
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    margin: 0;
+}
+
+.sem-h1 {
+    font-size: var(--h1-sem-desktop);
+}
+
+.sem-h2 {
+    font-size: var(--h2-sem-desktop);
+}
+
+.sem-h3 {
+    font-size: var(--h3-sem-desktop);
+}
+
+.sem-p {
+    font-family: var(--primary-font);
+    font-size: var(--p-sem-desktop);
 }
 
 p {
@@ -179,6 +206,7 @@ body {
 .hook {
     font-size: 11vw;
     line-height: 10vw;
+    min-height: 30vw;
 }
 
 .subhook a {
@@ -199,6 +227,89 @@ body {
 }
 
 /* SECTION CSS */
+
+.sem-section {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.sem-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.sem-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 60%;
+    gap: 10px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+/* CAROUSEL CSS */
+.carousel {
+    width: 100%;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-text-color);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: var(--primary-text-color);
+}
+
+/* v1 SEMESTER SECTION CSS */
 
 section .container.semesters {
     max-width: 950px;
@@ -347,4 +458,18 @@ footer .container {
 
 [data-theme="dark"] .subhook a {
     color: #AEABA7;
+}
+
+/* Blinking Cursor */
+
+.cursor {
+    display: inline-block;
+    font-weight: 300;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }

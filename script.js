@@ -91,3 +91,38 @@ for (let i = 0; i < faqHeadlines.length; i++) {
         }
     });
 };
+
+//HERO ANIMATION
+
+const heroHeadline = document.querySelector('.hook');
+const lines = ['My Time-', 'Line From', 'SWC → SDSU'];
+
+let lineIndex = 0;
+let charIndex = 0;
+
+heroHeadline.innerHTML = '';
+
+const typewriter = setInterval(function () {
+    if (charIndex < lines[lineIndex].length) {
+        let display = '';
+        for (let i = 0; i < lineIndex; i++) {
+            display += lines[i] + '<br>';
+        }
+        display += lines[lineIndex].substring(0, charIndex + 1);
+        heroHeadline.innerHTML = display + '<span class="cursor">|</span>';
+        charIndex++;
+    } else if (lineIndex < lines.length - 1) {
+        lineIndex++;
+        charIndex = 0;
+    } else {
+        clearInterval(typewriter);
+        heroHeadline.innerHTML = "My Time-<br>Line From<br>SWC → SDSU";
+    }
+}, 80);
+
+// CAROUSEL
+
+const carousels = document.querySelectorAll('.carousel');
+const dots = document.querySelectorAll('.carousel-dot');
+
+let currentSlide = 0;
